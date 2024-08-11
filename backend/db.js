@@ -1,10 +1,10 @@
 import { createPool } from 'mysql2/promise'; // Promise-based MySQL
 
 const pool = createPool({
-  host: 'localhost',
-  user: 'purvi',
-  password: '2468',
-  database: 'flashcard', // Ensure this matches your database name
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
 });
 
 export default pool;
