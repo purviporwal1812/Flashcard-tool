@@ -1,9 +1,9 @@
 import express from 'express';
 import cors from 'cors';
 import pool from './db.js'; // Import the database connection
-
+import dotenv from 'dotenv'
 const app = express();
-
+dotenv.config();
 app.use(cors());
 app.use(express.json());
 
