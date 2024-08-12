@@ -15,7 +15,6 @@ const FlashcardList = ({ flashcards = [] }) => {
       }, 600); // Match this duration with the flip animation duration
     } else {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % flashcards.length);
-      setIsFlipped(false);
     }
   };
 
@@ -31,7 +30,6 @@ const FlashcardList = ({ flashcards = [] }) => {
       setCurrentIndex(
         (prevIndex) => (prevIndex - 1 + flashcards.length) % flashcards.length
       );
-      setIsFlipped(false);
     }
   };
 
@@ -42,10 +40,10 @@ const FlashcardList = ({ flashcards = [] }) => {
   return (
     <div className="container mt-4">
       <div className="d-flex justify-content-between mb-3">
-        <button className="btn btn-primary" onClick={handlePrev}>
+        <button className="btn btn-primary" onClick={handlePrev} disabled={flashcards.length === 1}>
           Previous
         </button>
-        <button className="btn btn-primary" onClick={handleNext}>
+        <button className="btn btn-primary" onClick={handleNext} disabled={flashcards.length === 1}>
           Next
         </button>
       </div>

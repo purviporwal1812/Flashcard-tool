@@ -5,8 +5,6 @@ const Flashcard = ({ flashcard, flip, isFlipped }) => {
   const { question, answer } = flashcard;
 
   return (
-    <>
-    
     <div className="container mt-4">
       <div className="row justify-content-center">
         <div className="col-md-6 col-lg-4">
@@ -25,7 +23,6 @@ const Flashcard = ({ flashcard, flip, isFlipped }) => {
         </div>
       </div>
     </div>
-    </>
   );
 };
 
