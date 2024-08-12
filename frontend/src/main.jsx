@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App'; // Main App component
 import Dashboard from './components/Dashboard';
-import Flashcard from './components/FlashCard';
+import Flashcard from './components/Flashcard';
 
 
 // Define routes using createBrowserRouter
